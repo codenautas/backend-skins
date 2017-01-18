@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": "codenautas/backend-skins",
   "files": [
-    "confort"
+    "dist"
   ],
   "contributors": [
     { "name": "Julieta Vicente", "email": "julietaluciavicente@gmail.com" },
