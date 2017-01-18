@@ -1,0 +1,25 @@
+{
+  "name": "backend-skins",
+  "description": "Skins for backend-plus",
+  "version": "0.0.1",
+  "author": "Codenautas <codenautas@googlegroups.com>",
+  "license": "MIT",
+  "repository": "codenautas/backend-skins",
+  "files": [
+    "confort"
+  ],
+  "contributors": [
+    { "name": "Julieta Vicente", "email": "julietaluciavicente@gmail.com" },
+    { "name": "Estefanía Capece", "email": "eycapece@gmail.com" },
+    { "name": "Emilio Platzer", "email": "emilioplatzer@gmail.com" }
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "engines": {
+    "node": ">= 4.4"
+  },
+  "scripts": {
+  }
+}
