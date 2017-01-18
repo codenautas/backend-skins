@@ -1,7 +1,7 @@
 {
   "name": "backend-skins",
   "description": "Skins for backend-plus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Codenautas <codenautas@googlegroups.com>",
   "license": "MIT",
   "repository": "codenautas/backend-skins",
@@ -16,10 +16,12 @@
   "dependencies": {
   },
   "devDependencies": {
+    "backend-plus": "~0.8.4"
+  },
+  "scripts": {
+    "start": "node --version"
   },
   "engines": {
     "node": ">= 4.4"
-  },
-  "scripts": {
   }
 }

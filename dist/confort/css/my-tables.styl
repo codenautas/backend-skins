@@ -7,15 +7,16 @@ gridColor = rgba(255,255,255,0.9)
   background gridColor
 
 border-table()
-  border-bottom 2px solid #997
-  border-top    2px solid #997
-  border-left   2px solid #997
-  border-right  2px solid #997
+  border-bottom 1px solid #adb7d2
+  border-top    1px solid #adb7d2
+  border-left   1px solid #adb7d2
+  border-right  1px solid #adb7d2
   margin 0px
   border-spacing 0px
   border-collapse collapse
   
 .my-grid
+  font-family helvetica
   border-table()
 
 nowrap()
@@ -24,36 +25,64 @@ nowrap()
   max-width 300px
   
 .my-grid td
+  color #4a4a4a
   border-table()
   nowrap()
+  padding 5px
+
+.my-grid tr:nth-child(2n) 
+  background-color #f2f3f7
+
 
 .my-grid tr td x
+  background-color EFF0F4
   border-bottom   2px solid #666
-  border-top      2px solid #DDD
+  border-top      2px solid #3F517F
 
 .my-grid th
   border-table()
 
 .my-grid tbody th
   nowrap()
+  background-color #e4e6f2
 
 .my-grid caption
+  font-family helvetica
+  text-transform uppercase
+  font-weight bold
+  font-size 75%
+  letter-spacing 1px
   border-table()
+  background-color #3d60a2
+  padding 10px
+  color #FFF
 
 .my-grid tfoot
-  color #777
+  background-color #9aa7ca
+  color #FFF
   font-size 90%
+  padding 5px
 
 .my-grid thead th
+  font-family  helvetica
+  font-size 70%
+  text-transform uppercase
+  background-color #bec5e2
   white-space nowrap
+  color #274988
   
 .th-name
+  padding 10px
+  font-size 70%
   overflow hidden
-  
+    
 .my-grid thead th.th-detail
   font-size 60%
   white-space wrap
 
+.grid-th grid-th-actions
+   background-color #e4e6f2
+  
 [io-status=pending]
   background-color #CDE
   
@@ -61,7 +90,7 @@ nowrap()
   background-color #ABC
   
 [io-status=error]
-  background-color #DAA
+  background-color #FF6666
 
 [io-status=temporal-ok]
   background-color #ADA
@@ -76,15 +105,33 @@ nowrap()
   margin 0px
   border 0px
   padding 0px
-
-.table-button
-  background-color gridColor
-
+  background-color transparent
+ 
 .table-button img
-  height 16px
+  height 20px
+  padding 1px
+  -webkit-transform scale(1.0)
+  transform scale(1.0)
+  -webkit-transition .3s ease-in-out
+  transition .3s ease-in-out
+  outline none !important
 
+.table-button img:hover
+  -webkit-transform scale(1.2)
+  transform scale(1.2)
+  cursor pointer
+  outline none !important
+
+.table-button img:active
+  -webkit-transform scale(1.2)
+  transform scale(1.2)
+  cursor pointer
+  outline none !important
+  
 .autoFilter
+  background-color #d3daec
   width 30px
+  
   
 [has-filter='1'] 
   [when-filter=no] 
@@ -100,18 +147,20 @@ nowrap()
 
 .filter-span
   display inline-block
-  background-color #CEF
+  background-color #FFF
+  padding 2px
+  border-top 1px solid #A9B0C7
+  border-left 1px solid #A9B0C7
   min-height 20px
   min-width 20px
 
 .filter-line
   th
-    padding 0px
-    vertical-align bottom
+    vertical-align middle
     
 .filter-line
   td
-    padding 0px
+    padding 5px
     vertical-align bottom
 
 .grid-dummy-cell-ini
@@ -153,4 +202,69 @@ td.autoFilter button{
   font-size 90%
 
 .img-lupa
-  height 16px
+  height 20px
+  -webkit-transform scale(1.0)
+  transform scale(1.0)
+  -webkit-transition .2s ease-in-out
+  transition .2s ease-in-out
+  
+.img-lupa:hover
+  height 25px
+  cursor pointer
+  -webkit-transform scale(1.1)
+  transform scale(1.1)
+  -webkit-transition .2s ease-in-out
+  transition .3s ease-in-out
+  
+  
+.foot-info
+  color #FFF
+  font-weight 600
+  background-color #2f5097
+  border-right  2px solid #122348
+  border-bottom 2px solid #122348
+  border-left  2px solid #2f5097
+  border-top 2px solid #2f5097
+
+.foot-info:hover
+  color #FFF
+  background-color #0188cc
+  border-right  2px solid #036495
+  border-bottom 2px solid #036495
+  border-left  2px solid #0188cc
+  border-top 2px solid #0188cc
+  cursor pointer
+  
+.foot-info:active
+  color #FFF
+  background-color #082158
+  border-right  2px solid #2f5097
+  border-bottom 2px solid #2f5097
+  border-left  2px solid #122348
+  border-top 2px solid #122348
+  
+#button-filter
+  color #FFF
+  font-weight 600
+  background-color #2f5097
+  border-right  2px solid #122348
+  border-bottom 2px solid #122348
+  border-left  2px solid #2f5097
+  border-top 2px solid #2f5097
+
+#button-filter:hover
+  color #FFF
+  background-color #0188cc
+  border-right  2px solid #036495
+  border-bottom 2px solid #036495
+  border-left  2px solid #0188cc
+  border-top 2px solid #0188cc
+  cursor pointer
+  
+#button-filter:active
+  color #FFF
+  background-color #082158
+  border-right  2px solid #2f5097
+  border-bottom 2px solid #2f5097
+  border-left  2px solid #122348
+  border-top 2px solid #122348
