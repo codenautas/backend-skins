@@ -62,18 +62,21 @@
     border-left  2px solid #122348
     border-top 2px solid #122348
     
-  @-webkit-keyframes animatezoom 
-    from -webkit-transform scale(0.25)
-    to -webkit-transform scale(1)
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0.25)}
+    to {-webkit-transform: scale(1)}
+  }
   
-  @keyframes animatezoom 
-    from transform scale(0.25)
-    to transform scale(1)
+  @keyframes animatezoom {
+      from {transform: scale(0.25)}
+      to {transform: scale(1)}
+  }
   
-  @keyframes animatezoom 
-    from transform scale(0.25)
-    to transform scale(1)
-  
+  @keyframes animatezoom {
+      from {transform: scale(0.25)}
+      to {transform: scale(1)}
+  }
+
   .dialog-promise-background 
     display none
     position fixed 
