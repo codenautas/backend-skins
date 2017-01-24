@@ -1,6 +1,6 @@
-[my-skin=confort]
+[my-skin=confort-bis]
 
-  gridColor = rgba(255,255,255,0.9)
+  gridColor = rgba(255,255,255,1)
   
   .my-grid
     background gridColor
@@ -9,10 +9,10 @@
     background gridColor
   
   border-table()
-    border-bottom 1px solid #adb7d2
-    border-top    1px solid #adb7d2
-    border-left   1px solid #adb7d2
-    border-right  1px solid #adb7d2
+    border-bottom 1px solid #d8d8f2
+    border-top    1px solid #d8d8f2
+    border-left   1px solid #d8d8f2
+    border-right  1px solid #d8d8f2
     margin 0px
     border-spacing 0px
     border-collapse collapse
@@ -27,17 +27,18 @@
     max-width 300px
     
   .my-grid td
-    color #4a4a4a
+    font-size 90%
+    color #5d586c
     border-table()
     nowrap()
-    padding 5px
+    padding 7px
   
   .my-grid tr:nth-child(2n) 
-    background-color #f2f3f7
+    background-color #f4f5f8
   
   
   .my-grid tr td x
-    background-color EFF0F4
+    background-color #c7c7de
     border-bottom   2px solid #666
     border-top      2px solid #3F517F
   
@@ -46,7 +47,7 @@
   
   .my-grid tbody th
     nowrap()
-    background-color #e4e6f2
+    background-color #eeeef4
   
   .my-grid caption
     font-family helvetica
@@ -55,12 +56,16 @@
     font-size 75%
     letter-spacing 1px
     border-table()
-    background-color #3d60a2
-    padding 10px
+    background #535387
+    background -webkit-linear-gradient(#535387, #7e6ea1)
+    background -o-linear-gradient(#535387, #7e6ea1)
+    background -moz-linear-gradient(#535387, #7e6ea1)
+    background linear-gradient(#535387, #7e6ea1)
+    padding 15px
     color #FFF
   
   .my-grid tfoot
-    background-color #9aa7ca
+    background-color #c7c7de
     color #FFF
     font-size 90%
     padding 5px
@@ -69,9 +74,9 @@
     font-family  helvetica
     font-size 70%
     text-transform uppercase
-    background-color #bec5e2
+    background-color #c7c7de
     white-space nowrap
-    color #274988
+    color #685e84
     
   .th-name
     padding 10px
@@ -83,7 +88,7 @@
     white-space wrap
   
   .grid-th grid-th-actions
-     background-color #e4e6f2
+     background-color #eeeef4
     
   [io-status=pending]
     background-color #CDE
@@ -110,8 +115,8 @@
     background-color transparent
    
   .table-button img
-    height 24px
-    padding 1px
+    height 20px
+    padding 3px
     -webkit-transform scale(1.0)
     transform scale(1.0)
     -webkit-transition .3s ease-in-out
@@ -128,7 +133,7 @@
     cursor pointer
     
   .autoFilter
-    background-color #d3daec
+    background-color #c7c7de
     width 30px
     
     
@@ -201,14 +206,14 @@
     font-size 90%
   
   .img-lupa
-    height 20px
+    height 25px
     -webkit-transform scale(1.0)
     transform scale(1.0)
     -webkit-transition .2s ease-in-out
     transition .2s ease-in-out
     
   .img-lupa:hover
-    height 25px
+    height 35px
     cursor pointer
     -webkit-transform scale(1.1)
     transform scale(1.1)
