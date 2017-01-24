@@ -18,7 +18,7 @@
     border-collapse collapse
     
   .my-grid
-    font-family helvetica
+    font-family Helvetica
     border-table()
   
   nowrap()
@@ -36,7 +36,6 @@
   .my-grid tr:nth-child(2n) 
     background-color #f4f5f8
   
-  
   .my-grid tr td x
     background-color #c7c7de
     border-bottom   2px solid #666
@@ -44,13 +43,14 @@
   
   .my-grid th
     border-table()
+    color #5e5785
   
   .my-grid tbody th
     nowrap()
     background-color #eeeef4
   
   .my-grid caption
-    font-family helvetica
+    font-family Helvetica
     text-transform uppercase
     font-weight bold
     font-size 75%
@@ -71,7 +71,7 @@
     padding 5px
   
   .my-grid thead th
-    font-family  helvetica
+    font-family  Helvetica
     font-size 70%
     text-transform uppercase
     background-color #c7c7de
@@ -153,11 +153,26 @@
     display inline-block
     background-color #FFF
     padding 2px
-    border-top 1px solid #A9B0C7
-    border-left 1px solid #A9B0C7
+    border-top 2px solid #9393ab
+    border-left 2px solid #9393ab
+    border-bottom 2px solid #9393ab
+    border-right 2px solid #9393ab
     min-height 20px
     min-width 20px
+    outline none !important
   
+  .filter-span:focus
+    display inline-block
+    background-color #FFF
+    padding 2px
+    border-top 2px solid #66b8c6
+    border-left 2px solid #66b8c6
+    border-bottom 2px solid #66b8c6
+    border-right 2px solid #66b8c6
+    min-height 20px
+    min-width 20px
+    outline none !important
+    
   .filter-line
     th
       vertical-align middle
@@ -224,19 +239,28 @@
   .foot-info
     color #FFF
     font-weight 600
-    background-color #2f5097
-    border-right  2px solid #122348
-    border-bottom 2px solid #122348
-    border-left  2px solid #2f5097
-    border-top 2px solid #2f5097
+    padding 7px
+    background #8080a3
+    background -webkit-linear-gradient(#8080a3, #9898c4)
+    background -o-linear-gradient(#8080a3, #9898c4)
+    background -moz-linear-gradient(#8080a3, #9898c4)
+    background linear-gradient(#8080a3, #9898c4)
+    border-right  2px solid #7573a5
+    border-bottom 2px solid #7573a5
+    border-left  2px solid #7573a5
+    border-top 2px solid #7573a5
   
   .foot-info:hover
     color #FFF
-    background-color #0188cc
-    border-right  2px solid #036495
-    border-bottom 2px solid #036495
-    border-left  2px solid #0188cc
-    border-top 2px solid #0188cc
+    background #7372a1
+    background -webkit-linear-gradient(#585789, #799dae)
+    background -o-linear-gradient(#585789, #799dae)
+    background -moz-linear-gradient(#585789, #799dae)
+    background linear-gradient(#585789, #799dae)
+    border-right  2px solid #646791
+    border-bottom 2px solid #646791
+    border-left  2px solid #646791
+    border-top 2px solid #646791
     cursor pointer
     
   .foot-info:active
@@ -250,38 +274,59 @@
   #button-filter
     color #FFF
     font-weight 600
-    background-color #2f5097
-    border-right  2px solid #122348
-    border-bottom 2px solid #122348
-    border-left  2px solid #2f5097
-    border-top 2px solid #2f5097
-  
+    padding 7px
+    background #8080a3
+    background -webkit-linear-gradient(#8080a3, #9898c4)
+    background -o-linear-gradient(#8080a3, #9898c4)
+    background -moz-linear-gradient(#8080a3, #9898c4)
+    background linear-gradient(#8080a3, #9898c4)
+    border-right  2px solid #7573a5
+    border-bottom 2px solid #7573a5
+    border-left  2px solid #7573a5
+    border-top 2px solid #7573a5
+   
+    
   #button-filter:hover
     color #FFF
-    background-color #0188cc
-    border-right  2px solid #036495
-    border-bottom 2px solid #036495
-    border-left  2px solid #0188cc
-    border-top 2px solid #0188cc
+    background #7372a1
+    background -webkit-linear-gradient(#585789, #799dae)
+    background -o-linear-gradient(#585789, #799dae)
+    background -moz-linear-gradient(#585789, #799dae)
+    background linear-gradient(#585789, #799dae)
+    border-right  2px solid #646791
+    border-bottom 2px solid #646791
+    border-left  2px solid #646791
+    border-top 2px solid #646791
     cursor pointer
     
   #button-filter:active
     color #FFF
-    background-color #082158
-    border-right  2px solid #2f5097
-    border-bottom 2px solid #2f5097
-    border-left  2px solid #122348
-    border-top 2px solid #122348
+    background-color #5b588c
+    background -webkit-linear-gradient(#56558c, #50849c)
+    background -o-linear-gradient(#56558c, #50849c)
+    background -moz-linear-gradient(#56558c, #50849c)
+    background linear-gradient(#56558c, #50849c)
+    border-right  0px solid #5b588c
+    border-bottom 0px solid #5b588c
+    border-left  0px solid #5b588c
+    border-top 0px solid #5b588c
     
   #barra_superior
-    background-color #599abb
-    border-bottom 4px solid #83bcd9
+    background-color #5b588c
+    background -webkit-linear-gradient(#56558c, #50849c)
+    background -o-linear-gradient(#56558c, #50849c)
+    background -moz-linear-gradient(#56558c, #50849c)
+    background linear-gradient(#56558c, #50849c)
     margin 0px
     padding 0px
   
   #tables
-    background-color #599abb
-    font-family helvetica
+    background-color #5b588c
+    background -webkit-linear-gradient(#56558c, #50849c)
+    background -o-linear-gradient(#56558c, #50849c)
+    background -moz-linear-gradient(#56558c, #50849c)
+    background linear-gradient(#56558c, #50849c)
+    font-family Helvetica
     font-weight 600
     color #FFF
     text-transform uppercase
@@ -296,8 +341,12 @@
     font-size 70%
     
   #tables:hover
-    background-color #70c4ef
-    font-family helvetica
+    background-color #85b1c1
+    background -webkit-linear-gradient(#85b1c1, #35bfd4)
+    background -o-linear-gradient(#85b1c1, #35bfd4)
+    background -moz-linear-gradient(#85b1c1, #35bfd4)
+    background linear-gradient(#85b1c1, #35bfd4)
+    font-family Helvetica
     font-weight 600
     color #FFF
     text-transform uppercase
