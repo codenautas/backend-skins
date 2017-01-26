@@ -1,0 +1,178 @@
+[my-skin=confort-dark]
+
+  .dialog-promise
+    background-color rgba(255,255,255,0.9)
+    text-align center
+    margin 0px
+    padding 0px
+    border-right  1px solid #0bdbc9
+    border-bottom 1px solid #0bdbc9
+    border-left  1px solid #0bdbc9
+    border-top 1px solid #0bdbc9
+    display none
+    z-index 1
+    width auto
+    max-width 90%
+    height auto
+    max-height 90%
+    overflow auto
+    position fixed
+    top 5%
+    left 5%
+    -webkit-animation animatezoom 0.3s
+    animation animatezoom 0.3s
+  
+  .dialog-promise[docked=under]
+    transform-origin top left
+  
+  .dialog-promise[docked=under-right]
+    transform-origin top right
+  
+  .dialog-promise *
+    margin 5px 5px 5px 5px 
+      
+  .dialog-promise div:nth-child(2)
+    color #0f306e
+    text-transform uppercase
+    font-family Helvetica
+    font-size 75%
+    letter-spacing 1px
+    text-align left
+    font-weight 700
+    border transparent
+
+  
+  .dialog-promise button
+    color #484f69
+    font-weight 600
+    font-size 75%
+    padding 3px
+    background-color #7bbbc7
+    border-right  1px solid #7573a5
+    border-bottom 1px solid #7573a5
+    border-left  1px solid #7573a5
+    border-top 1px solid #7573a5
+   
+   .dialog-promise button:hover
+    color #484f69
+    font-weight 600
+    background-color #40a3b6
+    border-right  1px solid #646791
+    border-bottom 1px solid #646791
+    border-left  1px solid #646791
+    border-top 1px solid #646791
+    cursor pointer
+    
+  .dialog-promise button:active
+    color #FFF
+    background-color #082158
+    border-right  2px solid #5e5785
+    border-bottom 2px solid #5e5785
+    border-left  2px solid #122348
+    border-top 2px solid #122348
+    
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0.25)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+      from {transform: scale(0.25)}
+      to {transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+      from {transform: scale(0.25)}
+      to {transform: scale(1)}
+  }
+
+  .dialog-promise-background 
+    display none
+    position fixed 
+    z-index 1 
+    left 0
+    top 0
+    width 100%
+    height 100%
+    overflow auto
+    background-color rgb(16,29,73)
+    background-color rgba(16,29,73,0.3)
+    padding-top 60px
+  
+  .dialog-promise .dialog-promise-close-button
+    margin 0px
+    float right
+    background-color #60667c
+    width 20px
+    height 20px
+    color #484f69
+    font-weight bold
+    font-size 60%
+    border 0px
+    content "X"
+    
+  .dialog-promise .dialog-promise-close-button:hover
+    margin 0px
+    float right
+    background-color #73acb6
+    width 20px
+    height 20px
+    color white
+    font-weight bold
+    font-size 60%
+    border 0px
+    content "X"
+  
+  .dialog-promise-close-button:before
+    content 'X'
+    color #FFF
+  
+  .dialog-menu label
+    margin-left 4px
+    vertical-align 20%
+    white-space nowrap
+  
+  .dialog-menu td
+    text-align left
+  
+  .dialog-menu-line
+    height 2px
+    background-color rgba(100,100,100,0.3)
+  
+  .dialog-menu-non-option
+    background-color rgba(150,150,150,0.3)
+  
+  .dialog-menu-option  
+    -webkit-transform scale(1.0)
+    transform scale(1.0)
+    -webkit-transition .3s ease-in-out
+    transition .3s ease-in-out
+  
+  .dialog-menu-option:hover
+    -webkit-transition .3s ease-in-out
+    transition .3s ease-in-out
+    -webkit-transform scale(1.1)
+    transform scale(1.1)
+    cursor pointer
+    
+  .dialog-0 *
+    padding 0px
+    margin 0px
+    border 0px
+    border-image-width 0px
+    vertical-align bottom
+  
+  .dialog-0 table
+    border-collapse collapse
+  
+  .mini-menu-opt-img
+    height 40px
+    
+   input
+    background-color #FFF
+    padding 5px
+    border-right  1px solid #81ccd8
+    border-bottom 1px solid #81ccd8
+    border-left  1px solid #81ccd8
+    border-top 1px solid #81ccd8
+    outline none !important
