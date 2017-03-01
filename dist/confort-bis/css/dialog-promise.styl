@@ -4,7 +4,7 @@
     background-color rgba(255,255,255,0.9)
     text-align center
     margin 0px
-    padding 0px
+    padding 5px
     border-right  2px solid #9393ab
     border-bottom 2px solid #9393ab
     border-left  2px solid #9393ab
@@ -150,18 +150,16 @@
   .dialog-menu-non-option
     background-color rgba(150,150,150,0.3)
   
-  .dialog-menu-option  
-    -webkit-transform scale(1.0)
-    transform scale(1.0)
-    -webkit-transition .3s ease-in-out
-    transition .3s ease-in-out
-  
+  .dialog-menu-option
+    color #0f306e
+    text-transform uppercase
+    font-family Helvetica
+    font-weight bold
+    font-size 70%
+    cursor pointer    
+    
   .dialog-menu-option:hover
-    -webkit-transition .3s ease-in-out
-    transition .3s ease-in-out
-    -webkit-transform scale(1.1)
-    transform scale(1.1)
-    cursor pointer
+    color #706fb2
     
   .dialog-0 *
     padding 0px
@@ -174,9 +172,20 @@
     border-collapse collapse
   
   .mini-menu-opt-img
-    height 40px
+    -webkit-transform scale(1.0)
+    transform scale(1.0)
+    -webkit-transition .3s ease-in-out
+    transition .3s ease-in-out
+    height 22px
+    width 22px
+
+  .mini-menu-opt-img:hover
+    -webkit-transition .3s ease-in-out
+    transition .3s ease-in-out
+    -webkit-transform scale(1.1)
+    transform scale(1.1)
     
-   input
+  input
     background-color #e6e6f0
     padding 5px
     border-right  2px solid #9393ab
