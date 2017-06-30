@@ -29,6 +29,13 @@
   .dialog-promise[docked=under-right]
     transform-origin top right
   
+  .dialog-promise .dialog-promise-upper-div
+    margin 0px
+    padding 0px
+
+  .dialog-promise-inner-div
+    overflow auto
+
   .dialog-promise *
     margin 5px 5px 5px 5px 
       
@@ -148,14 +155,17 @@
     text-transform uppercase
     font-family Helvetica
     font-weight bold
-    font-size 70%
+    font-size 75%
     cursor pointer    
     
   .dialog-menu-option:hover
     color #354666
     background-color #ede4de
     cursor pointer
-    
+  
+  .dialog-menu-option label
+    cursor pointer
+  
   .dialog-0 *
     padding 0px
     margin 0px
