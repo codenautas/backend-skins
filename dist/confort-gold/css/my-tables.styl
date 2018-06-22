@@ -7,23 +7,29 @@
   
   .my-grid caption
     background gridColor
-  
+
   border-table()
-    border-bottom 1px solid #a9aeb9
-    border-top    0px solid #a9aeb9
-    border-left   1px solid #a9aeb9
+    border-table-no-right()
     border-right  1px solid #a9aeb9
+    
+  border-table-no-right()
+    border-bottom 1px solid #a9aeb9
+    border-top    1px solid #a9aeb9
+    border-left   1px solid #a9aeb9
+    border-right  0px solid #a9aeb9
     margin 0px
     border-spacing 0px
-    border-collapse collapse
-    
+    border-collapse collapse    
+  
   .my-grid
-    font-family Helvetica
+    font-family helvetica
     border-table()
   
+  .my-grid
+    border-table-no-right()
+ 
   nowrap()
     white-space pre
-    overflow hidden
     max-width 300px
     
   .my-grid td
@@ -33,6 +39,11 @@
     nowrap()
     padding 7px
   
+  .my-grid td.my-detail-grid
+    overflow-x visible
+    border-right none 
+    z-index -1000
+    
   .my-grid tr:nth-child(2n) 
     background-color #ddd1c6
   
@@ -205,6 +216,9 @@
   .my-grid td.autoFilter{
     nowrap()
     white-space nowrap
+    background-size 24px
+    background-position center left 
+    padding-left 24px
   }
   
   td.autoFilter button{
@@ -340,6 +354,12 @@
   .menu-item:hover
     color #fdb376
   
+  .menu-item[menu-selected="yes"]
+    background-color #9c9eab
+   
+  a.menu-item
+    margin-top 5px
+    
   #right-menu
    color #f8d8b9
    font-family Helvetica
