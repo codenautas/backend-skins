@@ -1,0 +1,85 @@
+.my-grid {
+    border-collapse: collapse;
+    border: none;
+    background: white;
+    margin-top: 10px;
+    font-size: small;
+  }
+
+  .my-grid > thead > tr > th {
+    background: rgb(255,255,255,0.9) !important;
+    outline: none;
+  }
+
+  .my-grid td, .my-grid th {
+    border: 1px solid #ddd;
+    padding: 3px 7px;
+    position: relative;
+  }
+
+  .my-grid caption {
+    border: none;
+    font-size: large;
+    margin-bottom: 7px;
+  }
+
+  .th-name {
+    outline: none;
+  }
+
+  /* Fila de filtros específica */
+  .filter-line td.autoFilter {
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    padding-left: 24px; 
+    background-position: 4px center;
+    background-repeat: no-repeat;
+  }
+
+  .my-grid button:not(.table-button), #button-filter {
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .table-button {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .table-button img, .dialog-promise img {
+    filter: grayscale(100%) opacity(0.5);
+    transition: 0.2s;
+    height: 16px;
+    width: auto;
+  }
+
+  .table-button:hover img, .dialog-promise .dialog-menu-option:hover img{
+    filter: none;
+    opacity: 1;
+  }
+
+  /* Cebras */
+  .my-grid tbody tr:nth-child(even) { background-color: #aaaaaa; }
+  .my-grid tbody tr:hover { background-color: #ebf4ff; }
+
+  /* Estados IO */
+  td[io-status=pending] { background-color: #ebf8ff; }
+  td[io-status=error] { background-color: #fff5f5; color: #c53030; }
+  td[io-status=temporal-ok] { background-color: #f0fff4; color: #276749; }
+
+  .my-grid > thead > tr > th {
+    background-color: #eee;
+  }
