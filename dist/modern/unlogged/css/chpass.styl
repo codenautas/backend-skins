@@ -101,6 +101,8 @@ tr>td.actions {
   text-transform: uppercase;
   font-size: medium;
   text-decoration: none;
+  font-size: 15px !important;
+  font-weight: 600 !important;
 }
 
 /* Botón Cancelar */
@@ -119,7 +121,11 @@ input[type=submit] {
   padding: 5px;
 }
 
-.submit:hover { background-color: #1d4ed8 !important; }
+input[type=submit]:hover {
+  cursor: pointer;
+  background-color: #1d4ed8 !important;
+  transition: 0.2s;
+}
 
 .chpasstable tr, .chpasstable td .iconostd { 
   display: none !important; 
@@ -133,3 +139,8 @@ input[type=submit] {
 
 .iconoslog, .formImg
   display none
+
+.error-message {
+  margin-top: 10px;
+  font-size: small;
+}
