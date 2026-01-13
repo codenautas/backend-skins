@@ -22,8 +22,8 @@ client-setup:
 ```
 
 # Button styles
-In the modern skin, buttons are automatically colored via the attribute 'color'. The possible values are 'primary', 'secondary', 'success', 'warning', and 'danger'.
-Additionally, the button can be outlined by adding the attribute outlined=true.
+In the modern skin, elements are automatically colored via the attribute 'color'. The possible values are 'primary', 'secondary', 'success', 'warning', and 'danger'.
+Additionally, the element can be outlined by adding the attribute outline=true.
 
 For example, when using the dialog-promise library, the buttons can be configured as follows:
 ```js
