@@ -12,46 +12,57 @@ body {
 #main-top-bar {
   top: 0;
   background: #1976d2;
-  border: none !important;
+  border: none;
   padding-bottom: 0px;
+  
+  /* --- ESTO ES LO NUEVO --- */
+  display: flex;
+  //align-items: center; /* Centra verticalmente logo, items e iconos */
+  //flex-wrap: nowrap;   /* Evita que los elementos caigan abajo */
+  //overflow-x: auto;    /* Si hay demasiados items, permite scroll horizontal en vez de romperse */
 }
 #main-top-bar * {
-  margin-left: 2px !important;
+  margin-left: 8px;
+  margin-top: 0px;
+}
+
+#main-logo{
+  margin-top:5px;
 }
 
 #main-top-bar1, .sub-menu-bar {
-  background: #1565c0 !important;
-  border: none !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-  display: flex !important;
-  align-items: center !important;
+  background: #1565c0;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
   padding: 0 16px !important;
 }
 
 .top-menu-bar .menu-item, .sub-menu-bar .menu-item {
-  color: white !important;
+  color: white;
   background: transparent !important;
-  border: none !important;
-  font-size: 13px !important;
-  font-weight: 500 !important;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
   text-transform: uppercase;
-  padding: 8px !important;
-  margin: 0 !important;
+  padding: 8px;
+  margin: 0;
   border-radius: 0px;
-  text-decoration: none !important;
+  text-decoration: none;
   transition: background 0.2s;
   border-radius: 0px !important;
 }
 
 .menu-item[menu-selected="yes"] { 
   background: rgba(0,0,0,0.15) !important; 
-  box-shadow: inset 0 -3px 0 white !important;
+  box-shadow: inset 0 -3px 0 white;
 }
 
 .menu-item {
-  background-color: #1976d2 !important;
-  border-radius: 3px !important;
-  color: #fff !important;
+  background-color: #1976d2;
+  border-radius: 3px;
+  color: #fff;
   text-transform: uppercase;
   font-weight: bold;
   transition: 0.1s;
@@ -68,29 +79,29 @@ body {
 }
 
   #active-user, #right-menu-icon, .right-lights {
-  filter: brightness(0) invert(1) !important; /* Iconos a blanco */
-  margin-left: 10px !important;
-  height: 20px !important;
-  width: auto !important;
+  filter: brightness(0) invert(1); /* Iconos a blanco */
+  margin-left: 10px;
+  height: 25px;
+  width: auto;
 }
 
 /* --- CONSOLA FLOTANTE --- */
 #mini-console {
-  position: fixed !important;
+  position: fixed;
   top: 55px;
   right: 20px;
   z-index: 2000;
-  background-color: #fde8e8 !important; 
-  color: #9b1c1c !important;
-  border: 1px solid #f8b4b4 !important;
+  background-color: #fde8e8; 
+  color: #9b1c1c;
+  border: 1px solid #f8b4b4;
   border-radius: 8px;
-  padding: 12px 18px !important;
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1) !important;
-  white-space: pre-wrap !important;
+  padding: 12px 12px 15px 8px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  white-space: pre-wrap;
   max-width: 350px;
 }
 #mini-console:not(:empty) {
-  display: block !important;
+  display: block;
 }
 
 
@@ -309,5 +320,7 @@ body {
 
 .table-param-screen a {
   background-color: #1976d2 !important;
-  border-radius: 3px;
+  padding 8px;
+  color: #fff !important
+  border-radius: 5px;
 }
