@@ -1,28 +1,28 @@
 body {
-    background: red !important;
+    background: red;
 }
 
 /* Solo se aplica si el formulario de login está presente */
 body:has(#chPassForm) {
   margin: 0;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-height: 100vh !important;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
-  font-family: 'Inter', sans-serif !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  font-family: 'Inter', sans-serif;
 }
 
 /* Contenedor Principal (Transformando la tabla en una Card) */
 #chPassForm {
   display: flex;
   justify-content: center;
-  background: #ffffff !important;
-  padding: 30px !important;
-  border-radius: 16px !important;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
-  width: 100% !important;
-  max-width: 380px !important;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 380px;
   animation: fadeIn 0.5s ease-out;
   text-transform: uppercase;
 }
@@ -36,61 +36,58 @@ body:has(#chPassForm) {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.logintable { width: 100% !important; border-collapse: collapse !important; }
+.logintable { width: 100%; border-collapse: collapse; }
 
 /* Título */
 .formtitle {
-  color: #1e293b !important;
-  font-size: 22px !important;
-  font-weight: 700 !important;
-  text-align: center !important;
-  margin: 0 0 24px 0 !important;
+  color: #1e293b;
+  font-size: 1.3em;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 24px 0;
   letter-spacing: -0.5px;
 }
 
 /* Logo */
 .logintableLogoImgRow img {
-  display: block !important;
-  margin: 0 auto 15px auto !important;
-  max-height: 150px !important;
-  width: auto !important;
+  display: block;
+  margin: 0 auto 15px auto;
+  max-height: 150px;
+  width: auto;
 }
 
 /* Labels */
 .formlabel label {
-  display: block !important;
-  color: #475569 !important;
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  text-transform: uppercase !important;
-  margin-bottom: 6px !important;
-  margin-top: 10px !important;
+  display: block;
+  color: #475569;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  margin-top: 10px;
 }
 
 /* Inputs de Texto y Password */
 .formtd input {
-  width: 94% !important;
-  padding: 12px 10px !important;
-  border: 1px solid #e2e8f0 !important;
-  border-radius: 8px !important;
-  font-size: 15px !important;
-  background-color: #e8f0fe !important;
-  transition: all 0.2s ease !important;
-  outline: none !important;
-  color: #1e293b !important;
+  width: 94%;
+  padding: 12px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #e8f0fe;
+  transition: all 0.2s ease;
+  outline: none;
+  color: #1e293b;
   text-transform: uppercase;
-  font-size: x-small !important;
 }
 
 .formtd input:focus {
-  border-color: #3b82f6 !important;
-  background-color: #ffffff !important;
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15) !important;
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
 }
 
 /* Botones acción */
 tr>td.actions {
-  display: flex !important;
+  display: flex;
   justify-content: space-between;
   margin-top: 14px;
 }
@@ -99,18 +96,27 @@ tr>td.actions {
   width: 47%;
   border-radius: 5px;
   text-transform: uppercase;
-  font-size: medium;
   text-decoration: none;
-  font-size: 15px !important;
-  font-weight: 600 !important;
+  font-weight: 600;
+  font-size: 1.2em;
 }
 
 /* Botón Cancelar */
 td a {
-  background-color: #ddd;
-  color: #666;
+  background-color: #f1f5f9; /* Un gris azulado muy claro y moderno */
+  color: #475569;            /* Texto gris oscuro para mejor contraste */
   text-align: center;
   padding: 5px 2px;
+  border: 1px solid #e2e8f0; /* Un borde sutil para darle definición */
+  transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+td a:hover {
+  background-color: #e2e8f0; /* Se oscurece un poco el fondo */
+  color: #1e293b;            /* El texto se vuelve casi negro */
+  border-color: #cbd5e1;     /* El borde se nota un poco más */
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
 }
 
 /* Botón Submit */
@@ -123,18 +129,18 @@ input[type=submit] {
 
 input[type=submit]:hover {
   cursor: pointer;
-  background-color: #1d4ed8 !important;
+  background-color: #1d4ed8;
   transition: 0.2s;
 }
 
 .chpasstable tr, .chpasstable td .iconostd { 
-  display: none !important; 
+  display: none; 
 }
 
 /* Ajuste de celdas de tabla para que fluyan como bloques */
 .chpasstable tr:not(.iconostd), .chpasstable td:not(.iconostd):not(.actions) {
-  display: block !important;
-  width: 100% !important;
+  display: block;
+  width: 100%;
 }
 
 .iconoslog, .formImg

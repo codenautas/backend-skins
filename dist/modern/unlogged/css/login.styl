@@ -2,22 +2,22 @@ body:has(#loginForm) {
   width: 80%;
   padding: 20px;
   margin: 0;
-  display: flex !important;
+  display: flex;
   flex-direction: column;
-  align-items: center !important;
-  justify-content: center !important;
+  align-items: center;
+  justify-content: center;
   justify-self: anchor-center;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
-  font-family: 'Inter', sans-serif !important;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  font-family: 'Inter', sans-serif;
 }
 
 #loginForm {
-  background: #ffffff !important;
-  padding: 30px !important;
-  border-radius: 16px !important;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
-  width: 100% !important;
-  max-width: 500px !important;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 500px;
   animation: fadeIn 0.5s ease-out;
 }
 
@@ -26,79 +26,78 @@ body:has(#loginForm) {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.logintable { width: 100% !important; border-collapse: collapse !important; }
+.logintable { width: 100%; border-collapse: collapse; }
 
 .formtitle {
-  color: #1e293b !important;
-  font-size: 24px !important;
-  font-weight: 700 !important;
-  text-align: center !important;
-  margin: 0 0 24px 0 !important;
+  color: #1e293b;
+  font-size: 1.8em;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 24px 0;
   letter-spacing: -0.5px;
   text-transform: uppercase;
 }
 
 .logintableLogoImgRow img {
-  display: block !important;
-  margin: 0 auto 15px auto !important;
-  max-height: 150px !important;
-  width: auto !important;
+  display: block;
+  margin: 0 auto 15px auto;
+  max-height: 150px;
+  width: auto;
 }
 
 .formlabel label {
-  display: block !important;
-  color: #475569 !important;
-  font-size: 20px !important;
-  font-weight: 600 !important;
-  text-transform: uppercase !important;
-  margin-bottom: 6px !important;
-  margin-top: 10px !important;
+  display: block;
+  color: #475569;
+  font-weight: 600
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  margin-top: 10px;
 }
 
 .formtd input {
-  width: 92% !important;
-  padding: 12px 14px !important;
-  border: 1px solid #e2e8f0 !important;
-  border-radius: 8px !important;
-  font-size: 20px !important;
-  background-color: #f8fafc !important;
-  transition: all 0.2s ease !important;
-  outline: none !important;
-  color: #1e293b !important;
+  width: 92%;
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: #f8fafc;
+  transition: all 0.2s ease;
+  outline: none;
+  color: #1e293b;
 }
 
 .formtd input:focus {
-  border-color: #3b82f6 !important;
-  background-color: #ffffff !important;
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15) !important;
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
 }
 
 .submit {
-  width: 100% !important;
-  background-color: #1976d2 !important;
-  color: white !important;
-  padding: 12px !important;
-  border: none !important;
-  border-radius: 8px !important;
-  font-size: 20px !important;
-  font-weight: 600 !important;
-  cursor: pointer !important;
-  margin-top: 25px !important;
-  transition: background 0.2s !important;
+  width: 100%;
+  background-color: #1976d2;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: background 0.2s;
   text-transform: uppercase;
 }
 
-.submit:hover { background-color: #1d4ed8 !important; }
+.submit:hover { background-color: #1d4ed8; }
 
 /* Limpieza de basura visual del HTML original */
 .logintableRightImg, #loginFormRightImg, .iconostd { 
-  display: none !important; 
+  display: none; 
 }
 
 /* Ajuste de celdas de tabla para que fluyan como bloques */
 .logintable tr, .logintable td {
-  display: block !important;
-  width: 100% !important;
+  display: block;
+  width: 100%;
 }
 
 #resultado_incompatibilidad {
