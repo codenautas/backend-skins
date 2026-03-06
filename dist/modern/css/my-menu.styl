@@ -14,20 +14,12 @@ body {
   background: #1976d2;
   border: none;
   padding-bottom: 0px;
-  
-  /* --- ESTO ES LO NUEVO --- */
   display: flex;
-  //align-items: center; /* Centra verticalmente logo, items e iconos */
-  //flex-wrap: nowrap;   /* Evita que los elementos caigan abajo */
-  //overflow-x: auto;    /* Si hay demasiados items, permite scroll horizontal en vez de romperse */
+  box-sizing: border-box;
 }
 #main-top-bar * {
   margin-left: 8px;
   margin-top: 0px;
-}
-
-#main-logo{
-  margin-top:5px;
 }
 
 #main-top-bar1, .sub-menu-bar {
@@ -37,6 +29,43 @@ body {
   display: flex;
   align-items: center;
   padding: 0 16px !important;
+}
+
+#main-top-bar > span {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* 1. Las luces son el inicio del bloque derecho (Order 1) */
+.right-lights {
+  order: 1;
+  margin-left: auto !important;
+}
+
+/* 2. Bob va en el medio (Order 2) */
+#active-user {
+  order: 2;
+  color: white;
+  margin-left: 10px !important;
+}
+
+#active-user, #right-menu-icon, .right-lights {
+  filter: brightness(0) invert(1); /* Iconos a blanco */
+}
+
+/* 3. Los puntos van al final (Order 3) */
+#right-menu-icon {
+  order: 3;
+  margin-left: 10px !important; /* Espacio respecto a Bob */
+  max-width:40px !important
+}
+
+#right-menu-icon, .right-lights img {
+  filter: brightness(0) invert(1) !important;
+  width: auto !important;
+  flex-shrink: 0 !important;
 }
 
 .top-menu-bar .menu-item, .sub-menu-bar .menu-item {
@@ -78,12 +107,6 @@ body {
   color: #666 !important;
 }
 
-  #active-user, #right-menu-icon, .right-lights {
-  filter: brightness(0) invert(1); /* Iconos a blanco */
-  margin-left: 10px;
-  height: 25px;
-  width: auto;
-}
 
 /* --- CONSOLA FLOTANTE --- */
 #mini-console {
