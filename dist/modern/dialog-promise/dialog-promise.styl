@@ -1,0 +1,237 @@
+// Estilo base del modal/contenedor que ya tenías
+.dialog-promise
+  background-color rgba(255,255,255,0.95) // Un toque más opaco para legibilidad
+  text-align center
+  margin 0px
+  padding 15px !important// Aumentamos padding para que el contenido respire
+  border 1px solid #456b71
+  box-shadow 5px 5px 15px rgba(137, 127, 140, 0.4) // Sombra más suave y moderna
+  width auto
+  max-width 90%
+  height auto
+  max-height 90%
+  overflow auto
+  -webkit-animation animatezoom 0.3s
+  animation animatezoom 0.3s
+
+  &[docked=under]
+    transform-origin top left
+
+  &[docked=under-right]
+    transform-origin top right
+
+  // --- EL INPUT PROLIJO DENTRO DEL DIALOG ---
+  .dialog-promise-upper-div
+    display flex
+    align-items center
+    background #fff
+    border 1px solid #456b71 // Mismo color de borde que el modal para coherencia
+    border-radius 6px
+    padding 8px 12px
+    margin-bottom 20px     // El espacio abajo que pediste
+    min-height 45px
+    box-sizing border-box
+    transition all 0.2s ease
+    text-align left        // Alineamos texto a la izquierda aunque el padre sea center
+
+    &:focus-within
+      border-color #ddd
+      box-shadow 0 0 0 3px rgba(59, 130, 246, 0.1)
+
+    // El div interno que contiene los elementos
+    & > div:first-child
+      display flex
+      align-items center
+      width 100%
+      gap 10px
+
+      // Lupa a la IZQUIERDA
+      img
+        order 1
+        height 16px
+        width auto
+        opacity 0.6
+        flex-shrink 0
+
+      // El Texto/Input al CENTRO
+      span[contenteditable="true"]
+        order 2
+        flex 1
+        top 0 !important      // Mata el -40px viejo
+        outline none
+        font-size 15px
+        color #333
+        min-width 120px
+
+        &:empty::before
+          content "Escribe para filtrar..."
+          color #999
+          pointer-events none
+
+      // La X a la DERECHA
+      .dialog-promise-close-button
+        order 3
+        background transparent
+        border none
+        cursor pointer
+        padding 5px
+        color #456b71
+        display flex
+        align-items center
+        font-size 18px
+        line-height 1
+
+        &:hover
+          color #ef4444
+          transform scale(1.1)
+
+    // Limpiador antiguo
+    div[style*="clear"]
+      display none !important
+
+.dialog-promise-upper-div
+  // 1. Contenedor Principal (El "Input" grande)
+  display flex
+  align-items center
+  background #ffffff
+  border 2px solid #e2e8f0
+  border-radius 4px
+  padding 0 8px !important
+  margin-bottom 10px !important     // Espacio abajo
+  box-shadow 0 2px 4px rgba(0,0,0,0.02)
+  transition all 0.2s ease
+  box-sizing border-box
+
+  &:focus-within
+    border-color #ddd
+    box-shadow 0 0 0 4px rgba(59, 130, 246, 0.1)
+
+  // 2. Ajuste del div interno para distribuir elementos
+  & > div:first-child
+    display flex
+    align-items center
+    width 100%
+    gap 4px
+    position relative
+
+    // Lupa a la IZQUIERDA
+    img
+      order 1
+      height 18px
+      width auto
+      opacity 0.4
+      flex-shrink 0
+
+    // Texto al CENTRO
+    span[contenteditable="true"]
+      order 2
+      flex 1             // Toma todo el espacio sobrante
+      top 0 !important   // Mata el -40px
+      outline none
+      font-size 16px
+      color #1e293b
+      padding 8px 0
+      min-width 100px
+
+    // La "X" a la DERECHA
+    .dialog-promise-close-button
+      order 3
+      background none
+      border none
+      cursor pointer
+      padding 8px
+      margin-right -8px  // Ajuste para que pegue más al borde derecho
+      color #94a3b8
+      display flex
+      align-items center
+
+      &:hover
+        color #ef4444
+
+  // 3. Limpieza de residuos antiguos
+  div[style*="clear"]
+    display none !important
+
+// --- MEJORA DE LA LISTA (TABLA) ---
+.dialog-promise-inner-div
+  max-height 350px           // Altura máxima para que no se pierda en la pantalla
+  overflow-y auto            // Scroll vertical
+  margin-top 5px
+  padding-right 5px          // Espacio para el scrollbar
+
+  // Personalización del Scrollbar (Moderno y fino)
+  &::-webkit-scrollbar
+    width 6px
+  &::-webkit-scrollbar-thumb
+    background #cbd5e1
+    border-radius 10px
+  &::-webkit-scrollbar-track
+    background transparent
+
+// Estilo de la tabla de opciones
+table.dialog-menu
+  width 100%
+  border-collapse separate
+  border-spacing 0 2px       // Pequeña separación entre filas
+
+  tr.dialog-menu-option
+    cursor pointer
+    transition background 0.2s ease, transform 0.1s ease
+    border-radius 6px        // Bordes redondeados en la fila
+
+    &:hover
+      background-color rgba(25, 118, 210, 0.08) // Azul suave que combina con tu focus
+      // transform translateX(4px) // Opcional: pequeño desplazamiento al hacer hover
+
+    // Estilo de las celdas
+    td
+      padding 10px 12px
+      border none            // Quitamos bordes de tabla vieja
+      text-align left
+      color #475569          // Gris azulado moderno
+      font-family 'Segoe UI', system-ui, sans-serif
+      font-size 14px
+
+      // Primera columna (si está vacía la hacemos pequeña)
+      &:first-child
+        width 20px
+        padding-right 0
+
+      label
+        cursor pointer
+        display block
+        font-weight 500
+        text-transform none  // Quitamos el uppercase rígido para mejor lectura
+        letter-spacing 0.3px
+
+    // Línea divisoria si el sistema la usa
+    &.dialog-menu-line
+      height 1px
+      background #e2e8f0
+      margin 8px 0
+
+  // Estilo para opciones que no son seleccionables
+  .dialog-menu-non-option
+    background #f8fafc
+    color #94a3b8
+    font-size 12px
+    padding 5px 12px
+    cursor default
+
+// Estilo para todos los inputs del sistema
+input
+  border 1px solid #ddd
+  padding 3px 7px
+  position relative
+  background transparent
+  border-radius 4px // Un pequeño radio para que no sea tan rígido
+  font-family inherit
+  font-size 14px
+  transition border-color 0.2s ease, box-shadow 0.2s ease
+  outline none // Quitamos el outline azul por defecto del navegador
+
+  // Efecto cuando el usuario hace clic para escribir
+  &:focus
+    border-color #ddd // Usamos el azul de tu .menu-item para coherencia
+    box-shadow 0 0 0 2px rgba(25, 118, 210, 0.1)
+    background #fff // Al escribir, un fondo blanco ayuda a la lectura
