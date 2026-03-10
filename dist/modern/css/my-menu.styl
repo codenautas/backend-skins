@@ -130,22 +130,6 @@ body {
 button
   @extend .menu-item
 
-/* dialogs */
-
-.dialog-promise {
-    border-radius: 5px;
-    padding: 0.5rem;
-}
-
-.dialog-promise-inner-div input {
-  border-width: 1px;
-  border-radius: 3px;
-  border-color: #ddd;
-  padding: 3px;
-  box-shadow: 1px 1px 5px #ddd;
-}
-
-
 /* BOTONES */
 
 [color] {
@@ -277,3 +261,57 @@ button
     background-color: #aaa;
 }
 
+
+/* proc input */
+.table-param-screen td[contenteditable="true"] {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ddd;
+}
+
+/* proc result */
+
+.result-div {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  width: fit-content;
+  min-height: none;
+}
+
+.result-div[result=success] {
+  background-color: #DCFCE7 !important;
+  color: #166534;
+  border-left: 4px solid #22C55E;
+}
+
+.result-div[result=error] {
+  background-color: #FEF3C7 !important;
+  color: #92400E;
+  border-left: 4px solid #F59E0B;
+}
+
+.table-param-screen tr {
+  display: grid;
+}
+
+.table-param-screen td:not([contenteditable]) {
+  text-transform: uppercase;
+  font-size: x-small;
+  font-weight: bold;
+  color: #666;
+}
+
+.table-param-screen td[contenteditable] {
+  padding: 5px;
+  margin-bottom: -7px;
+  margin-top: -2px;
+  margin-left: 4px;
+}
+
+.table-param-screen a {
+  background-color: #1976d2 !important;
+  padding 8px;
+  color: #fff !important
+  border-radius: 5px;
+}
