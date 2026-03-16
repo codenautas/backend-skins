@@ -1,0 +1,148 @@
+// Estilo base del modal/contenedor que ya tenías
+.dialog-promise
+  background-color rgba(255,255,255,0.95) // Un toque más opaco para legibilidad
+  text-align center
+  margin 0px
+  border 1px solid #456b71
+  box-shadow 5px 5px 15px rgba(137, 127, 140, 0.4) // Sombra más suave y moderna
+  width auto
+  max-width 90%
+  height auto
+  max-height 90%
+  animation animatezoom 0.3s
+
+  &[docked=under]
+    transform-origin top left
+
+  &[docked=under-right]
+    transform-origin top right
+
+// --- EL INPUT PROLIJO DENTRO DEL DIALOG ---
+.dialog-promise .dialog-promise-upper-div
+  padding 0px 5px
+
+.dialog-promise-upper-div
+  // 1. Contenedor Principal (El "Input" grande)
+  display flex
+  align-items center
+  background #ffffff
+
+  &:focus-within
+    border-color #ddd
+    box-shadow 0 0 0 1px rgba(59, 130, 246, 0.1)
+
+  // 2. Ajuste del div interno para distribuir elementos
+  & > div:first-child
+    display flex
+    align-items center
+    width 100%
+    position relative
+    gap 5px
+
+    // Lupa a la IZQUIERDA
+    img
+      order 1
+      height 18px
+      width auto
+      opacity 0.4
+      flex-shrink 0
+
+    // Texto al CENTRO
+    span[contenteditable="true"]
+      order 2
+      flex 1             // Toma todo el espacio sobrante
+      outline none
+      font-size 16px
+      color #1e293b
+      min-width 100px
+
+    // La "X" a la DERECHA
+    .dialog-promise-close-button
+      order 3
+      background none
+      border none
+      cursor pointer
+      padding 8px
+      margin-right -8px  // Ajuste para que pegue más al borde derecho
+      color #94a3b8
+      display flex
+      align-items center
+
+      &:hover
+        color #ef4444
+
+// Estilo de la tabla de opciones
+table.dialog-menu
+  width 100%
+  border-collapse separate
+  border-spacing 0 2px       // Pequeña separación entre filas
+
+  tr.dialog-menu-option
+    cursor pointer
+    transition background 0.2s ease, transform 0.1s ease
+    border-radius 6px        // Bordes redondeados en la fila
+
+    &:hover
+      background-color rgba(25, 118, 210, 0.08) // Azul suave que combina con tu focus
+      // transform translateX(4px) // Opcional: pequeño desplazamiento al hacer hover
+
+    // Estilo de las celdas
+    td
+      border none            // Quitamos bordes de tabla vieja
+      text-align left
+      color #475569          // Gris azulado moderno
+      font-size 14px
+
+      // Primera columna (si está vacía la hacemos pequeña)
+      &:first-child
+        width 15px
+        padding-right 0
+
+      label
+        cursor pointer
+        display block
+        font-weight 500
+        text-transform none  // Quitamos el uppercase rígido para mejor lectura
+        letter-spacing 0.3px
+
+    // Línea divisoria si el sistema la usa
+    &.dialog-menu-line
+      height 1px
+      background #e2e8f0
+      margin 8px 0
+
+  // Estilo para opciones que no son seleccionables
+  .dialog-menu-non-option
+    background #f8fafc
+    color #94a3b8
+    font-size 12px
+    padding 5px 12px
+    cursor default
+
+// Estilo para todos los inputs del sistema
+input
+  border 1px solid #ddd
+  padding 3px 5px
+  position relative
+  background transparent
+  border-radius 4px // Un pequeño radio para que no sea tan rígido
+  font-size 14px
+  transition border-color 0.2s ease, box-shadow 0.2s ease
+  outline none // Quitamos el outline azul por defecto del navegador
+
+  // Efecto cuando el usuario hace clic para escribir
+  &:focus
+    border-color #ddd // Usamos el azul de tu .menu-item para coherencia
+    box-shadow 0 0 0 2px rgba(25, 118, 210, 0.1)
+    background #fff // Al escribir, un fondo blanco ayuda a la lectura
+
+.dialog-promise-inner-div
+  margin-top: 10px
+
+
+.dialog-promise-inner-div input {
+  border-width: 1px;
+  border-radius: 3px;
+  border-color: #ddd;
+  padding: 3px;
+}
