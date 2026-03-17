@@ -20,6 +20,7 @@
 // --- EL INPUT PROLIJO DENTRO DEL DIALOG ---
 .dialog-promise .dialog-promise-upper-div
   padding 0px 5px
+  border-bottom 1px solid #e2e8f0
 
 .dialog-promise-upper-div
   // 1. Contenedor Principal (El "Input" grande)
@@ -63,10 +64,9 @@
       border none
       cursor pointer
       padding 8px
+      margin-left auto
       margin-right -8px  // Ajuste para que pegue más al borde derecho
       color #94a3b8
-      display flex
-      align-items center
 
       &:hover
         color #ef4444
@@ -95,7 +95,7 @@ table.dialog-menu
 
       // Primera columna (si está vacía la hacemos pequeña)
       &:first-child
-        width 15px
+        //width 15px
         padding-right 0
 
       label
@@ -119,25 +119,11 @@ table.dialog-menu
     padding 5px 12px
     cursor default
 
-// Estilo para todos los inputs del sistema
-input
-  border 1px solid #ddd
-  padding 3px 5px
-  position relative
-  background transparent
-  border-radius 4px // Un pequeño radio para que no sea tan rígido
-  font-size 14px
-  transition border-color 0.2s ease, box-shadow 0.2s ease
-  outline none // Quitamos el outline azul por defecto del navegador
-
   // Efecto cuando el usuario hace clic para escribir
   &:focus
     border-color #ddd // Usamos el azul de tu .menu-item para coherencia
     box-shadow 0 0 0 2px rgba(25, 118, 210, 0.1)
     background #fff // Al escribir, un fondo blanco ayuda a la lectura
-
-.dialog-promise-inner-div
-  margin-top: 10px
 
 
 .dialog-promise-inner-div input {
