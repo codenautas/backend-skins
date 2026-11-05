@@ -1,54 +1,106 @@
+:root {
+  --primary: #1976d2;
+  --primary-dark: #1565c0;
+  --primary-rgb: 25, 118, 210;
+  --font-family: Roboto, 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+}
+
 * {
-  font-family: 'Inter', Arial, sans-serif !important;
+  font-family: var(--font-family) !important;
 }
 body {
-  background-color: #f8fafc !important; margin: 0;
+  background-color: #f5f5f5 !important; margin: 0;
 }
 
 #main-top-bar[dev-mode] {
-  background: repeating-linear-gradient(-45deg, #1976d2, #1976d2 8px, #5e7c9aff 8px, #5e7c9aff 16px) !important;
+  background: repeating-linear-gradient(-45deg, var(--primary), var(--primary) 8px, #5e7c9aff 8px, #5e7c9aff 16px) !important;
 }
 
-#main-top-bar {
-  top: 0;
-  background: #1976d2;
-  border: none;
-  padding-bottom: 0px;
-  display: flex;
+/* Si una grilla es más ancha que la ventana, las barras acompañan el scroll horizontal */
+#total-layout {
+  min-width: max-content;
+}
+#main-top-bar, #main-top-bar1, .sub-menu-bar {
+  position: sticky;
+  left: 0;
+  width: 100vw;
   box-sizing: border-box;
 }
+/* 100vw incluye la barra de scroll vertical y la barra se corre al llegar al final del scroll horizontal; 100cqw mide el ancho visible */
+@supports (width: 1cqw) {
+  html {
+    container-type: inline-size;
+  }
+  #main-top-bar, #main-top-bar1, .sub-menu-bar {
+    width: 100cqw;
+  }
+}
+
+/* --- BARRA SUPERIOR (estilo Material: app bar con elevación y tabs) --- */
+#main-top-bar {
+  top: 0;
+  background: var(--primary);
+  border: none;
+  padding: 0 !important;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 40px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14);
+  z-index: 10;
+}
 #main-top-bar * {
-  margin-left: 8px;
-  margin-top: 0px;
+  margin: 0;
+  vertical-align: middle;
 }
 
 #main-top-bar1, .sub-menu-bar {
-  background: #1565c0;
+  background: var(--primary-dark);
   border: none;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12);
   display: flex;
   align-items: center;
   padding: 0 16px !important;
 }
 
+/* Una sola fila: los items se achican antes de pasar de línea */
 #main-top-bar > span {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
   width: 100%;
-  flex-wrap: wrap;
+  min-width: 0;
+  padding: 0 12px;
+  box-sizing: border-box;
+  gap: 0;
+}
+
+#main-logo {
+  height: 28px !important;
+  width: 28px !important;
+  flex-shrink: 0;
+  margin-right: 12px !important;
+  border-radius: 4px;
 }
 
 /* 1. Las luces son el inicio del bloque derecho (Order 1) */
 .right-lights {
   order: 1;
   margin-left: auto !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
-/* 2. Bob va en el medio (Order 2) */
+/* 2. Usuario va en el medio (Order 2) */
 #active-user, #not-logged {
   order: 2;
   color: white;
-  margin-left: 10px !important;
+  margin-left: 12px !important;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 #active-user, #right-menu-icon, .right-lights {
@@ -58,48 +110,78 @@ body {
 /* 3. Los puntos van al final (Order 3) */
 #right-menu-icon {
   order: 3;
-  margin-left: 10px !important; /* Espacio respecto a Bob */
-  max-width:40px !important
+  margin-left: 8px !important;
+  height: 20px;
+  max-width: 40px !important;
+  padding: 8px;
+  border-radius: 50%;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#right-menu-icon:hover {
+  background: rgba(255,255,255,0.15);
 }
 
 #right-menu-icon, .right-lights img {
   filter: brightness(0) invert(1) !important;
   width: auto !important;
   flex-shrink: 0 !important;
+  float: none !important;
+  height: 20px;
 }
 
 .top-menu-bar .menu-item, .sub-menu-bar .menu-item {
   color: white;
   background: transparent !important;
   border: none;
-  font-size: 14px;
+  font-size: clamp(11px, 0.9vw, 14px);
   font-weight: 500;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  padding: 8px;
+  padding: 0 clamp(4px, 0.45vw, 8px);
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
   margin: 0;
-  border-radius: 0px;
+  border-radius: 0px !important;
   text-decoration: none;
   transition: background 0.2s;
-  border-radius: 0px !important;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.top-menu-bar .menu-item:hover, .sub-menu-bar .menu-item:hover {
+  background: rgba(255,255,255,0.12) !important;
+  opacity: 1;
+}
+
+.sub-menu-bar .menu-item {
+  height: 40px;
+  line-height: 40px;
 }
 
 .menu-item[menu-selected="yes"] {
-  background: rgba(0,0,0,0.15) !important;
+  background: rgba(255,255,255,0.08) !important;
   box-shadow: inset 0 -3px 0 white;
+  opacity: 1 !important;
 }
 
 .menu-item {
-  background-color: #1976d2;
-  border-radius: 3px;
+  background-color: var(--primary);
+  border-radius: 4px;
   color: #fff;
   text-transform: uppercase;
-  font-weight: bold;
-  transition: 0.1s;
-  padding: 5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  padding: 6px 12px;
 }
 
 .menu-item:hover {
-  background-color: #0069d9 !important;
+  background-color: var(--primary-dark) !important;
 }
 
 .menu-item[is-selected] {
@@ -107,11 +189,22 @@ body {
   color: #666 !important;
 }
 
+/* En pantallas angostas se permite partir en dos filas */
+@media (max-width: 760px) {
+  #main-top-bar > span {
+    flex-wrap: wrap;
+  }
+  .top-menu-bar .menu-item, .sub-menu-bar .menu-item {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
 
 /* --- CONSOLA FLOTANTE --- */
 #mini-console {
   position: fixed;
-  top: 55px;
+  top: 56px;
   right: 20px;
   z-index: 2000;
   background-color: #fde8e8;
@@ -133,34 +226,37 @@ button
 /* BOTONES */
 
 [color] {
-  border-radius: 3px;
-  padding: 5px;
+  border-radius: 4px;
+  padding: 6px 16px;
+  letter-spacing: 0.04em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2), 0 1px 1px rgba(0,0,0,0.14);
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 [color=primary]:not([outline]) {
-  background-color: #1976d2;
+  background-color: var(--primary);
   color: #fff;
-  border: 1px solid #1976d2;
+  border: 1px solid var(--primary);
   transition: 0.1s;
 }
 
 [color=primary]:not([outline]):hover {
-  background-color: #0069d9;
+  background-color: var(--primary-dark);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25), 0 4px 5px rgba(0,0,0,0.14);
 }
 
 [color=primary][outline=true] {
   background-color: transparent;
-  border: 1px solid #1976d2;
-  color: #1976d2;
+  border: 1px solid var(--primary);
+  color: var(--primary);
   transition: 0.1s;
 }
 
 [color=primary][outline=true]:hover {
-  background-color: #1976d2;
+  background-color: var(--primary);
   color: #fff;
 }
 
@@ -301,3 +397,7 @@ input
   font-size 14px
   transition border-color 0.2s ease, box-shadow 0.2s ease
   outline none // Quitamos el outline azul por defecto del navegador
+
+input:focus
+  border-color var(--primary)
+  box-shadow 0 0 0 1px var(--primary)

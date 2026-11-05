@@ -3,8 +3,9 @@
   background-color rgba(255,255,255,0.95) // Un toque más opaco para legibilidad
   text-align center
   margin 0px
-  border 1px solid #456b71
-  box-shadow 5px 5px 15px rgba(137, 127, 140, 0.4) // Sombra más suave y moderna
+  border none
+  border-radius 4px
+  box-shadow 0 5px 5px -3px rgba(0,0,0,0.2), 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12) // Elevación Material
   width auto
   max-width 90%
   height auto
@@ -83,7 +84,7 @@ table.dialog-menu
     border-radius 6px        // Bordes redondeados en la fila
 
     &:hover
-      background-color rgba(25, 118, 210, 0.08) // Azul suave que combina con tu focus
+      background-color unquote("rgba(var(--primary-rgb), 0.08)") // Azul suave que combina con tu focus
       // transform translateX(4px) // Opcional: pequeño desplazamiento al hacer hover
 
     // Estilo de las celdas
@@ -92,6 +93,11 @@ table.dialog-menu
       text-align left
       color #475569          // Gris azulado moderno
       font-size 14px
+      vertical-align middle
+
+      img
+        display block
+        margin 0 auto
 
       // Primera columna (si está vacía la hacemos pequeña)
       &:first-child
@@ -122,7 +128,7 @@ table.dialog-menu
   // Efecto cuando el usuario hace clic para escribir
   &:focus
     border-color #ddd // Usamos el azul de tu .menu-item para coherencia
-    box-shadow 0 0 0 2px rgba(25, 118, 210, 0.1)
+    box-shadow 0 0 0 2px unquote("rgba(var(--primary-rgb), 0.1)")
     background #fff // Al escribir, un fondo blanco ayuda a la lectura
 
 
