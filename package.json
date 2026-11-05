@@ -16,10 +16,12 @@
   "dependencies": {
   },
   "devDependencies": {
-    "backend-plus": "~0.8.4"
+    "backend-plus": "~0.8.4",
+    "stylus": "^0.64.0"
   },
   "scripts": {
-    "start": "node --version"
+    "start": "node --version",
+    "test": "node test/compilar-styl.js"
   },
   "engines": {
     "node": ">= 4.4"

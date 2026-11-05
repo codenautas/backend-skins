@@ -34,3 +34,15 @@ confirmPromise("Confirm prompt", {
     ]
 })
 ```
+
+## Publicación
+
+Se publica en npm desde GitHub Actions (`.github/workflows/publish.yml`), igual que backend-plus y dmencu. No hacer `npm publish` local.
+
+```bash
+npm test                   # compila todos los .styl de dist/
+npm version patch          # sube package.json, hace el commit y crea el tag vX.Y.Z
+git push --follow-tags     # el push del tag dispara el workflow
+```
+
+Requisito (una sola vez): el paquete `backend-skins` en npmjs.com necesita un *Trusted publisher* para GitHub Actions con organización `codenautas`, repositorio `backend-skins` y workflow `publish.yml`.
