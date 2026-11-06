@@ -56,31 +56,31 @@
 }
 
 .my-grid button:not(.table-button), #button-filter {
-  height: 24px;
   font-size: 0.80rem !important;
   align-items: center;
+  vertical-align: middle;
   background-color: var(--primary);
   color: white;
-  border: none;
-  padding: 4px 12px;
+  border: 1px solid var(--primary);
+  padding: 0.55em 16px;
   border-radius: 4px;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2), 0 1px 1px rgba(0,0,0,0.14);
   transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .my-grid button:not(.table-button):hover, #button-filter:hover {
   background-color: var(--primary-dark);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25), 0 4px 5px rgba(0,0,0,0.14);
 }
 
 #main_layout .my-grid .menu-item
   @extend .my-grid button:not(.table-button), #button-filter
-  display: inline
+  display: inline-block
 
 .table-button {
   background: transparent;
