@@ -351,6 +351,17 @@ button
 }
 
 
+/* Centrado vertical del texto de los botones: las mayúsculas quedan más abajo del centro de la línea
+   (según la fuente), así que se recorta la caja al alto de las mayúsculas y el padding queda simétrico */
+@supports (text-box: trim-both cap alphabetic) {
+  #main_layout .menu-item, button:not(.table-button), [color], .table-param-screen a {
+    text-box: trim-both cap alphabetic;
+  }
+  #main_layout .menu-item:not(.my-grid *), button:not(.table-button, #button-filter, .my-grid button), [color]:not(.my-grid *), .table-param-screen a {
+    padding-block: 0.8em;
+  }
+}
+
 /* proc input */
 .table-param-screen td[contenteditable="true"] {
   border: 2px solid #ddd;
