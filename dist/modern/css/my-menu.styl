@@ -5,7 +5,7 @@
   --font-family: Roboto, 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
 }
 
-* {
+*:not(:where([class*="Mui"], [class*="Mui"] *, .formulario *)) {
   font-family: var(--font-family) !important;
 }
 body {
@@ -213,12 +213,12 @@ body {
   display: block;
 }
 
-button
+button:not(:where([class*="Mui"], [class*="Mui"] *, .formulario *))
   @extend .menu-item
 
 /* BOTONES */
 
-[color] {
+[color]:not(:where([class*="Mui"], [class*="Mui"] *, .formulario *)) {
   border-radius: 4px;
   padding: 6px 16px;
   letter-spacing: 0.04em;
@@ -354,10 +354,22 @@ button
 /* Centrado vertical del texto de los botones: las mayúsculas quedan más abajo del centro de la línea
    (según la fuente), así que se recorta la caja al alto de las mayúsculas y el padding queda simétrico */
 @supports (text-box: trim-both cap alphabetic) {
-  #main_layout .menu-item, button:not(.table-button), [color], .table-param-screen a {
+  #main_layout .menu-item, .table-param-screen a {
     text-box: trim-both cap alphabetic;
   }
-  #main_layout .menu-item:not(.my-grid *), button:not(.table-button, #button-filter, .my-grid button), [color]:not(.my-grid *), .table-param-screen a {
+  button:not(.table-button, :where([class*="Mui"], [class*="Mui"] *, .formulario *)) {
+    text-box: trim-both cap alphabetic;
+  }
+  [color]:not(:where([class*="Mui"], [class*="Mui"] *, .formulario *)) {
+    text-box: trim-both cap alphabetic;
+  }
+  #main_layout .menu-item:not(.my-grid *), .table-param-screen a {
+    padding-block: 0.8em;
+  }
+  button:not(.table-button, #button-filter, .my-grid button, :where([class*="Mui"], [class*="Mui"] *, .formulario *)) {
+    padding-block: 0.8em;
+  }
+  [color]:not(.my-grid *, :where([class*="Mui"], [class*="Mui"] *, .formulario *)) {
     padding-block: 0.8em;
   }
 }
@@ -392,7 +404,7 @@ button
 }
 
 // Estilo para todos los inputs del sistema
-input
+input:not(:where([class*="Mui"], [class*="Mui"] *, .formulario *))
   border 1px solid #ddd
   padding 3px 5px
   position relative
@@ -402,6 +414,6 @@ input
   transition border-color 0.2s ease, box-shadow 0.2s ease
   outline none // Quitamos el outline azul por defecto del navegador
 
-input:focus
+input:not(:where([class*="Mui"], [class*="Mui"] *, .formulario *)):focus
   border-color var(--primary)
   box-shadow 0 0 0 1px var(--primary)
