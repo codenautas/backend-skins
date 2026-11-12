@@ -24,8 +24,8 @@
   font-size: 0.85rem;
 }
 
-/* sólo la fila bajo el mouse: si el mouse está en una grilla hija no se pinta la fila de la grilla madre */
-.my-grid > tbody > tr:hover:not(:has(tr:hover)) > td {
+/* sólo la fila bajo el mouse: si el mouse está en una grilla hija no se pinta la fila de la grilla madre; las celdas con io-status conservan su color (feedback de guardado) */
+.my-grid > tbody > tr:hover:not(:has(tr:hover)) > td:not([io-status]) {
   background: unquote("rgba(var(--primary-rgb), 0.06)");
 }
 
