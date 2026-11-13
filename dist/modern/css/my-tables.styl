@@ -24,8 +24,14 @@
   font-size: 0.85rem;
 }
 
-/* sólo la fila bajo el mouse: si el mouse está en una grilla hija no se pinta la fila de la grilla madre; las celdas con io-status conservan su color (feedback de guardado) */
-.my-grid > tbody > tr:hover:not(:has(tr:hover)) > td:not([io-status]) {
+/* sólo la fila bajo el mouse: si el mouse está en una grilla hija no se pinta la fila de la grilla madre.
+   El realce va en una capa superpuesta (no cambia el background de la celda), así se conservan los colores propios:
+   feedback de guardado (io-status), celdas deshabilitadas, filas con color, etc. */
+.my-grid > tbody > tr:hover:not(:has(tr:hover)) > td::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
   background: unquote("rgba(var(--primary-rgb), 0.06)");
 }
 
